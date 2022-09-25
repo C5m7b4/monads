@@ -13,3 +13,7 @@ adds a tryCatch monad that returns either a Right or a left
 ## branch 11
 
 Here we are practicing using what we have created so far
+
+## branch 12
+
+here we are using our Either Monad again to solve an additional problem
