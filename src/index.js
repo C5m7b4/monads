@@ -22,3 +22,6 @@ exercise2();
 exercise3();
 exercise4();
 exercise5();
+
+import { eitherex1 } from './EitherExercises';
+eitherex1();
