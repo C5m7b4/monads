@@ -15,8 +15,10 @@ import {
   exercise2,
   exercise3,
   exercise4,
+  exercise5,
 } from './BoxExercises';
 exercise1();
 exercise2();
 exercise3();
 exercise4();
+exercise5();
