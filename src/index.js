@@ -9,3 +9,6 @@ const child = document.createElement('p');
 child.innerHTML = 'Hello';
 main.appendChild(child);
 root.appendChild(main);
+
+import { exercise1 } from './BoxExercises';
+exercise1();
