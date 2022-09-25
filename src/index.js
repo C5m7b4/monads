@@ -10,6 +10,7 @@ child.innerHTML = 'Hello';
 main.appendChild(child);
 root.appendChild(main);
 
-import { exercise1, exercise2 } from './BoxExercises';
+import { exercise1, exercise2, exercise3 } from './BoxExercises';
 exercise1();
 exercise2();
+exercise3();

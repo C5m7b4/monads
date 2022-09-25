@@ -38,4 +38,18 @@ const exercise2 = () => {
   console.log(halfTheFirstLargeNumber([1, 4, 50]));
 };
 
-export { exercise1, exercise2 };
+const moneyToFloat = (str) =>
+  Box(str)
+    .map((s) => s.replace(/\$/, ''))
+    .map((s) => parseFloat(s))
+    .fold((s) => s.toFixed(2));
+const exercise3 = () => {
+  // const moneyToFloat_ = (str) => {
+  //   const n = str.replace(/\$/, '');
+  //   return parseFloat(n);
+  // };
+  console.log('exercise3');
+  console.log(moneyToFloat('$5.00'));
+};
+
+export { exercise1, exercise2, exercise3 };
