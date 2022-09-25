@@ -19,4 +19,23 @@ const exercise1 = () => {
   console.log(nextCharFromString(' 64'));
 };
 
-export { exercise1 };
+const exercise2 = () => {
+  console.log('exercise2');
+  const first = (xs) => xs[0];
+
+  // const halfTheFirstLargeNumber_ = (xs) => {
+  //   const found = xs.filter((x) => x > 20);
+  //   const answer = first(found) / 2;
+  //   return `The answer is ${answer}`;
+  // };
+
+  const halfTheFirstLargeNumber = (xs) =>
+    Box(xs)
+      .map((f) => f.filter((x) => x > 20))
+      .map((a) => first(a) / 2)
+      .fold((x) => `The answer is ${x}`);
+
+  console.log(halfTheFirstLargeNumber([1, 4, 50]));
+};
+
+export { exercise1, exercise2 };
