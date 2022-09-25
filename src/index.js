@@ -28,8 +28,11 @@ root.appendChild(main);
 
 import getPort from './excercises_01';
 import street from './exercise_02';
+import streetName from './exercise_03';
 const result = getPort();
 console.log(result);
 
 const address = { address: { street: { name: 'Willow' } } };
 console.log(street(address));
+
+console.log(streetName(address));
