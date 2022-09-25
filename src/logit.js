@@ -1,0 +1,6 @@
+const logIt = (x) => {
+  console.log(x);
+  return x;
+};
+
+export default logIt;
