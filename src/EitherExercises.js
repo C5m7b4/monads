@@ -1,4 +1,4 @@
-import { Right, Left } from './Either';
+import { fromNullable } from './fromNullable';
 
 const eitherex1 = () => {
   // const findColor_ = (name) =>
@@ -6,14 +6,14 @@ const eitherex1 = () => {
   //     name
   //   ]);
 
-  const findColor = (name) => {
-    const found = {
-      red: '#ff4444',
-      blue: '#3b5988',
-      yellow: '#fff68f',
-    }[name];
-    return found ? Right(found) : Left('not found');
-  };
+  const findColor = (name) =>
+    fromNullable(
+      {
+        red: '#ff4444',
+        blue: '#3b5988',
+        yellow: '#fff68f',
+      }[name]
+    );
 
   const res = () =>
     findColor('red')
