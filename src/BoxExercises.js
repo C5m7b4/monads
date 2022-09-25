@@ -67,4 +67,29 @@ const exercise4 = () => {
   console.log(percentToFloat('%20'));
 };
 
-export { exercise1, exercise2, exercise3, exercise4 };
+const exercise5 = () => {
+  console.log('exercise5');
+  // const applyDiscount_ = (price, discount) => {
+  //   const cents = moneyToFloat(price);
+  //   const savings = percentToFloat(discount);
+  //   return cents - cents * savings;
+  // };
+  const applyDiscount = (price, discount) =>
+    Box(moneyToFloat(price)).chain((cents) =>
+      Box(percentToFloat(discount))
+        .map((savings) => cents - cents * savings)
+        .map((t) => t.toFixed(2))
+        .map((t) => `$${t}`)
+        .fold((x) => x)
+    );
+
+  console.log(applyDiscount('$5.00', '%20'));
+};
+
+export {
+  exercise1,
+  exercise2,
+  exercise3,
+  exercise4,
+  exercise5,
+};
