@@ -27,5 +27,9 @@ root.appendChild(main);
 // eitherex1();
 
 import getPort from './excercises_01';
+import street from './exercise_02';
 const result = getPort();
 console.log(result);
+
+const address = { address: { street: { name: 'Willow' } } };
+console.log(street(address));
