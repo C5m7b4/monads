@@ -52,4 +52,19 @@ const exercise3 = () => {
   console.log(moneyToFloat('$5.00'));
 };
 
-export { exercise1, exercise2, exercise3 };
+const percentToFloat = (xs) =>
+  Box(xs)
+    .map((str) => str.replace(/%/, ''))
+    .map((x) => parseFloat(x))
+    .fold((x) => x * 0.01);
+const exercise4 = () => {
+  console.log('exercise4');
+  // const percentToFloat_ = (str) => {
+  //   const float = parseFloat(str.replace(/%/, ''));
+  //   return float * 0.01;
+  // };
+
+  console.log(percentToFloat('%20'));
+};
+
+export { exercise1, exercise2, exercise3, exercise4 };
