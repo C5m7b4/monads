@@ -12,14 +12,14 @@ import { fromNullable } from './fromNullable';
 //   }
 // };
 
-const streetName = (user) =>
-  fromNullable(user.address)
-    .map((address) => address.street)
-    .map((street) => street.name)
-    .fold(
-      () => 'no street',
-      (x) => x
-    );
+// const streetName = (user) =>
+//   fromNullable(user.address)
+//     .map((address) => address.street)
+//     .map((street) => street.name)
+//     .fold(
+//       () => 'no street',
+//       (x) => x
+//     );
 
 // const streetName = (user) =>
 //   fromNullable(user.address)
@@ -29,5 +29,15 @@ const streetName = (user) =>
 //       () => 'no street',
 //       (x) => x
 //     );
+
+const streetName = (user) =>
+  fromNullable(user)
+    .chain((user) => fromNullable(user.address))
+    .chain((address) => fromNullable(address.street))
+    .map((street) => street.name)
+    .fold(
+      () => 'no street',
+      (x) => x
+    );
 
 export default streetName;
