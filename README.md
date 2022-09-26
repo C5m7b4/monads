@@ -17,3 +17,7 @@ Here we are practicing using what we have created so far
 ## branch 12
 
 here we are using our Either Monad again to solve an additional problem
+
+## branch 15
+
+enumerate an actual array of objects with logging build in
