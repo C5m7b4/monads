@@ -36,3 +36,44 @@ const address = { address: { street: { name: 'Willow' } } };
 console.log(street(address));
 
 console.log(streetName(address));
+
+import { Right } from './Either';
+
+console.log(
+  Right(2).fold(
+    () => 'nothing',
+    (x) => x
+  )
+);
+
+const employees = [
+  {
+    id: 1,
+    name: 'mike',
+    job: 'developer',
+  },
+  {
+    id: 2,
+    name: 'tommy',
+    job: 'developer',
+  },
+  {
+    id: 3,
+    name: 'tj',
+    job: 'retail',
+  },
+  {
+    id: 4,
+    name: 'sally',
+    job: 'receptionist',
+  },
+  {
+    id: 5,
+    name: 'cody',
+    job: 'employer',
+  },
+];
+
+console.log('developer search');
+import { findDevelopers } from './exercise_05';
+console.log(findDevelopers(employees));
