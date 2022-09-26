@@ -1,13 +1,5 @@
 import myJson from '../config.json';
-import { Right, Left } from './Either';
-
-const tryCatch = (f) => {
-  try {
-    return Right(f());
-  } catch (e) {
-    return Left(e);
-  }
-};
+import { tryCatch } from './TryCatch';
 
 // const getPort = () => {
 //   try {

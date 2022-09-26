@@ -26,7 +26,7 @@ root.appendChild(main);
 // import { eitherex1 } from './EitherExercises';
 // eitherex1();
 
-import getPort from './excercises_01';
+import getPort from './excercise_01';
 import street from './exercise_02';
 import streetName from './exercise_03';
 const result = getPort();
