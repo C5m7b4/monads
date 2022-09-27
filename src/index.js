@@ -77,3 +77,19 @@ const employees = [
 console.log('developer search');
 import { findDevelopers } from './exercise_05';
 console.log(findDevelopers(employees));
+
+import { counter, curriedAdd } from './closures';
+
+const ourCounter = counter();
+console.log(ourCounter());
+console.log(ourCounter());
+console.log(ourCounter());
+console.log(ourCounter());
+console.log(ourCounter());
+console.log(ourCounter());
+
+const addTwo = curriedAdd(2);
+
+console.log(addTwo(20));
+console.log(addTwo(10));
+console.log(addTwo(0));
