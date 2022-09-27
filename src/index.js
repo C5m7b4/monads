@@ -74,22 +74,36 @@ const employees = [
   },
 ];
 
-console.log('developer search');
-import { findDevelopers } from './exercise_05';
-console.log(findDevelopers(employees));
+// console.log('developer search');
+// import { findDevelopers } from './exercise_05';
+// console.log(findDevelopers(employees));
 
-import { counter, curriedAdd } from './closures';
+// import { counter, curriedAdd } from './closures';
 
-const ourCounter = counter();
-console.log(ourCounter());
-console.log(ourCounter());
-console.log(ourCounter());
-console.log(ourCounter());
-console.log(ourCounter());
-console.log(ourCounter());
+// const ourCounter = counter();
+// console.log(ourCounter());
+// console.log(ourCounter());
+// console.log(ourCounter());
+// console.log(ourCounter());
+// console.log(ourCounter());
+// console.log(ourCounter());
 
-const addTwo = curriedAdd(2);
+// const addTwo = curriedAdd(2);
 
-console.log(addTwo(20));
-console.log(addTwo(10));
-console.log(addTwo(0));
+// console.log(addTwo(20));
+// console.log(addTwo(10));
+// console.log(addTwo(0));
+
+import { iterator } from './Iterator';
+console.log('iterators');
+const returnNextElement = iterator([4, 5, 6]);
+const elem1 = returnNextElement.next();
+console.log(elem1);
+const elem2 = returnNextElement.next();
+console.log(elem2);
+
+const returnNextEmployee = iterator(employees);
+const emp1 = returnNextEmployee.next();
+console.log(emp1);
+const emp2 = returnNextEmployee.next();
+console.log(emp2);
