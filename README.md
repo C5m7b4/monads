@@ -25,3 +25,7 @@ enumerate an actual array of objects with logging build in
 ## branch  16
 
 We are adding a closure and also creating a curried function;
+
+## branch 17
+
+here we are creating an iterator to see what that looks lik
