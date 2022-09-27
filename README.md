@@ -21,3 +21,7 @@ here we are using our Either Monad again to solve an additional problem
 ## branch 15
 
 enumerate an actual array of objects with logging build in
+
+## branch  16
+
+We are adding a closure and also creating a curried function;
