@@ -107,3 +107,12 @@ const emp1 = returnNextEmployee.next();
 console.log(emp1);
 const emp2 = returnNextEmployee.next();
 console.log(emp2);
+
+console.log('generators');
+import { createFlow } from './generator';
+const ne = createFlow();
+const e1 = ne.next();
+console.log(e1.value);
+console.log(ne.next().value);
+console.log(ne.next().value);
+console.log(ne.next().value);

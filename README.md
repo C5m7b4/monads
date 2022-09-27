@@ -28,4 +28,26 @@ We are adding a closure and also creating a curried function;
 
 ## branch 17
 
-here we are creating an iterator to see what that looks lik
+here we are creating an iterator to see what that looks like
+
+## branch 18
+
+we are going to need a new package for this:
+npm install --save-dev @babel/plugin-transform-regenerator
+
+
+``js
+{
+  "plugins":[
+    ["@babel/plugin-transform-react-jsx", {
+      "pragma":"vdom.createElement",
+      "throwIfNamespace": false
+    }],
+    ["@babel/plugin-transform-regenerator",{
+      "asyncGenerators": true,
+      "generators": true,
+      "async": true
+    }]
+  ]
+}
+``
